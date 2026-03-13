@@ -1,4 +1,4 @@
-## Cyber Wolf – Smart Sensor Analytics
+## WOLF SCANNER
 <p align="center">
   <img width="350" height="350" src="logo/logo.png">
 </p>
