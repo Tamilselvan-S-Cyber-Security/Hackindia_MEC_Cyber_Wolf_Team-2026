@@ -11,7 +11,7 @@ flowchart TD
     E --> F[Developer Support]
 
     B --> G[Community Support]
-    G --> H[Call Notes System]
+    G --> H[Calling System]
     G --> I[Message Based Support]
     G --> J[Blockchain Based Secure Chat]
 ```
