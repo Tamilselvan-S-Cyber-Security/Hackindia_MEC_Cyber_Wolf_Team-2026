@@ -13,6 +13,60 @@ Cyber Wolf is a lightweight sensor framework for web applications that focuses o
 
 ### Working Flowchart (High‑Level Logic)
 
+```mermaid
+flowchart TD
+    U[User Activity]
+    U --> W1[Page View]
+    U --> W2[Field Edit]
+    U --> W3[Search Event]
+    U --> W4[Localhost or IPv6 Access]
+
+    subgraph S1[Sensor Collection Layer]
+        C1[Capture identity context]
+        C2[Capture technical context]
+        C3[Attach event payload]
+        C4[Add UTC timestamp]
+    end
+
+    W1 --> C1
+    W2 --> C1
+    W3 --> C1
+    W4 --> C1
+    C1 --> C2 --> C3 --> C4
+
+    subgraph S2[Pre Processing and Validation]
+        P1[Remove empty and null fields]
+        P2[Serialize list and object data to JSON]
+        P3[Normalize event schema]
+        P4[Prepare secure API payload]
+    end
+
+    C4 --> P1 --> P2 --> P3 --> P4
+
+    subgraph S3[Sensor API Core]
+        A1[Receive authenticated request]
+        A2[Validate and classify event type]
+        A3[Store event for analysis]
+        A4[Return status and response message]
+    end
+
+    P4 --> A1 --> A2 --> A3 --> A4
+
+    subgraph S4[Observation and Intelligence]
+        O1[Log request and response details]
+        O2[Build behavior timeline]
+        O3[Detect anomalies and suspicious patterns]
+        O4[Feed dashboard alerts and reports]
+    end
+
+    A3 --> O1 --> O2 --> O3 --> O4
+
+    style S1 fill:#131220,stroke:#25eab5,stroke-width:1px,color:#d7e6e1
+    style S2 fill:#1b1a2f,stroke:#5bcfbb,stroke-width:1px,color:#d7e6e1
+    style S3 fill:#25213d,stroke:#f5b944,stroke-width:1px,color:#d7e6e1
+    style S4 fill:#2c2c2c,stroke:#90a1b9,stroke-width:1px,color:#d7e6e1
+```
+
 ```text
 [User interacts with web app]
                 |
