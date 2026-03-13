@@ -121,4 +121,8 @@ flowchart TD
 | IPv6 and special‑case support        | Explicit testing of localhost/IPv6 scenarios                                   | Shows attention to real‑world edge cases and infrastructure     |
 | Plug‑and‑play test harness           | Reusable script to generate realistic test events                               | Quick reproducible demos, easy to showcase multiple scenarios   |
 
+## Chrome Extension( Wolf Scanner 2026)
+<p align="center">
+  <img src="flowchart/wolf-chrome.svg" alt="Wolf Scanner live working flowchart (animated SVG)" width="100%">
+</p>
 
