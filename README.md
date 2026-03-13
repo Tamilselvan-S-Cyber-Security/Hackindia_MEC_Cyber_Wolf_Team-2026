@@ -16,6 +16,10 @@ Cyber Wolf is a lightweight sensor framework for web applications that focuses o
 
 ### Working Flowchart (High‑Level Logic)
 
+<p align="center">
+  <img src="flowchart/wolf-scanner-live-working.svg" alt="Wolf Scanner live working flowchart (animated SVG)" width="100%">
+</p>
+
 ```mermaid
 flowchart TD
     U[User Activity]
@@ -102,6 +106,9 @@ flowchart TD
   - analyze usage (searches, page views, edits)
   - feed dashboards, alerts, and reports
 ```
+<p align="center">
+  <img src="flowchart/tool.svg" alt="Wolf Scanner live working flowchart (animated SVG)" width="100%">
+</p>
 
 ### Key Features and Enhancements
 
